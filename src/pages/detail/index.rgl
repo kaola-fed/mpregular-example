@@ -1,0 +1,48 @@
+<template>
+  <div>
+    <div>{ abc }</div>
+    <div class="klass { primary ? 'is-primary' : '' }" style="{ a ? '1' : '2' }"></div>
+    <img src="/static/img/a.jpg" alt="">
+    <A></A>
+    {#if a > 1}
+    aaa
+    {#elseif a < 1}
+    bbb
+    {/if}
+    {#list items as item}
+      <B></B>
+    {/list}
+  </div>
+</template>
+
+<script>
+  import A from './a.rgl'
+  import B from './b.rgl'
+
+  export default {
+    components: {
+      A: A,
+      B: B,
+    },
+    config() {
+      console.log( 'config' )
+    }
+  }
+</script>
+
+<style lang="less" scoped>
+  .a {
+    font-size: 19px;
+
+    .b {
+      color: #ddd;
+    }
+  }
+</style>
+
+<style>
+  div {
+    color: blue;
+    display: flex;
+  }
+</style>
