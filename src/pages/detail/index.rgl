@@ -1,7 +1,16 @@
 <template>
   <div>
-    <div>{ abc }</div>
-    <div class="klass { primary ? 'is-primary' : '' }" style="{ a ? '1' : '2' }"></div>
+    <!-- <div>{ abc }</div> -->
+    <A title="{ abc }"/>
+    <A title="{ '2: ' + abc }"></A>
+    {#list list as a}
+      {#list a as a_b}
+        {#list a_b as a_b_c}
+          <A title="{ a_b_c }" ></A>
+        {/list}
+      {/list}
+    {/list}
+    <!-- <div class="klass { primary ? 'is-primary' : '' }" style="{ a ? '1' : '2' }"></div>
     <img src="/static/img/a.jpg" alt="">
     <A></A>
     {#if a > 1}
@@ -11,7 +20,7 @@
     {/if}
     {#list items as item}
       <B></B>
-    {/list}
+    {/list} -->
   </div>
 </template>
 
@@ -20,12 +29,46 @@
   import B from './b.rgl'
 
   export default {
+    mpType: 'page',
+    // data: {
+    //   abc: 'hello abc',
+    //   items: [
+    //     1, 2, 3, 4
+    //   ]
+    // },
     components: {
       A: A,
       B: B,
     },
     config() {
-      console.log( 'config' )
+      this.data = {
+        abc: 'hello abc',
+        // a: {
+        //   title: 'hello mpregular'
+        // }
+        list: [
+          [
+            [1, 2]
+          ],
+          [
+            [3, 4]
+          ]
+        ]
+      }
+
+      setTimeout(() => {
+        this.data.list = [
+          [
+            [5, 6]
+          ],
+          [
+            [8, 4, 10]
+          ]
+        ]
+        this.data.abc = 'bye bye abc'
+        this.$update();
+      }, 3000)
+      console.log( 'config', this )
     }
   }
 </script>

@@ -7,11 +7,18 @@ module.exports = {
     'app': path.resolve( __dirname, 'src/index.js' ),
     'pages/detail/index': path.resolve( __dirname, 'src/pages/detail/index.js' ),
   },
+  // target: 'node',
+  target: require('mpvue-webpack-target'),
   devtool: 'source-map',
   output: {
     path: path.resolve( __dirname, 'dist/' ),
     filename: 'static/js/[name].js',
     chunkFilename: 'static/js/[id].js'
+  },
+  resolve: {
+    alias: {
+      'regularjs': path.resolve(__dirname, '../mpregular/lib/index.js')
+    }
   },
   module: {
     rules: [

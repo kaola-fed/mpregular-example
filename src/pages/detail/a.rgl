@@ -1,9 +1,14 @@
 <template>
-<div>a.rgl</div>
+  <B greeting="{title}"></B>
+  <div>a.rgl</div>
 </template>
 
 <script>
-export default {
+import B from './b.rgl';
 
+export default {
+  components: {
+    B
+  }
 }
 </script>

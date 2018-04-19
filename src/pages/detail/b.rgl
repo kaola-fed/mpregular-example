@@ -1,5 +1,5 @@
 <template>
-<div>b.rgl</div>
+<div>B say: { greeting }</div>
 </template>
 
 <script>
