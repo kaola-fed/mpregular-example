@@ -105,7 +105,7 @@ export default {
     }
   },
   onFilterList( e ) {
-    this.data.showStatus = e.item.value || ALL;
+    this.data.showStatus = e.item.value;
   },
   onRemove(item) {
     this.data.list = this.data.list.filter(todo => todo !== item);
