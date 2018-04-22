@@ -5,7 +5,8 @@ const webpack = require( 'webpack' )
 module.exports = {
   entry: {
     'app': path.resolve( __dirname, 'src/index.js' ),
-    'pages/detail/index': path.resolve( __dirname, 'src/pages/detail/index.js' ),
+    // 'pages/detail/index': path.resolve( __dirname, 'src/pages/detail/index.js' ),
+    'pages/todomvc/index': path.resolve( __dirname, 'src/pages/todomvc/index.js' ),
   },
   // target: 'node',
   target: require('mpvue-webpack-target'),
@@ -17,7 +18,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'regularjs': path.resolve(__dirname, '../mpregular/lib/index.js')
+      'regularjs': path.resolve(__dirname, '../mpregular/lib/index.js'),
+      '@': path.resolve(__dirname, './src')
     }
   },
   module: {

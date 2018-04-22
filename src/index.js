@@ -9,7 +9,8 @@ app.$inject()
 export default {
   config: {
     pages: [
-      'pages/detail/index'
+      // 'pages/detail/index',
+      'pages/todomvc/index'
     ],
     window: {
       backgroundTextStyle: 'light',
