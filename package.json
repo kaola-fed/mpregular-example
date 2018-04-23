@@ -26,6 +26,6 @@
     "webpack": "^2.7.0"
   },
   "dependencies": {
-    "regularjs": "^0.6.0-beta.10"
+    "mpregular": "^0.0.1"
   }
 }

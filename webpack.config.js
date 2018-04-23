@@ -18,7 +18,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'regularjs': path.resolve(__dirname, '../mpregular/lib/index.js'),
+      // 'regularjs': path.resolve(__dirname, '../mpregular/lib/index.js'),
+      'regularjs': path.resolve(__dirname, './node_modules/mpregular/lib/index.js'),
       '@': path.resolve(__dirname, './src')
     }
   },
