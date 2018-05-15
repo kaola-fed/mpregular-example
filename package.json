@@ -26,6 +26,6 @@
     "webpack": "^3.11.0"
   },
   "dependencies": {
-    "mpregular": "^0.0.2"
+    "mpregular": "^0.0.3"
   }
 }
