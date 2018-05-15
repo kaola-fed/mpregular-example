@@ -2,25 +2,30 @@ const path = require( 'path' )
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' )
 const webpack = require( 'webpack' )
 
+function resolve(uri) {
+  return path.resolve( __dirname,  uri);
+}
+
 module.exports = {
   entry: {
-    'app': path.resolve( __dirname, 'src/index.js' ),
-    // 'pages/detail/index': path.resolve( __dirname, 'src/pages/detail/index.js' ),
-    'pages/todomvc/index': path.resolve( __dirname, 'src/pages/todomvc/index.js' ),
+    'app': resolve( 'src/index.js' ),
+    'pages/index/index': resolve( 'src/pages/index/index.js' ),
+    'pages/counter/index': resolve( 'src/pages/counter/index.js' ),
+    'pages/todomvc/index': resolve( 'src/pages/todomvc/index.js' )
   },
   // target: 'node',
   target: require('mpvue-webpack-target'),
   devtool: 'source-map',
   output: {
-    path: path.resolve( __dirname, 'dist/' ),
+    path: resolve( 'dist/' ),
     filename: 'static/js/[name].js',
     chunkFilename: 'static/js/[id].js'
   },
   resolve: {
     alias: {
-      // 'regularjs': path.resolve(__dirname, '../mpregular/lib/index.js'),
-      'regularjs': path.resolve(__dirname, './node_modules/mpregular/lib/index.js'),
-      '@': path.resolve(__dirname, './src')
+      // 'regularjs': resolve('../mpregular/lib/index.js'),
+      'regularjs': resolve( './node_modules/mpregular/lib/index.js' ),
+      '@': resolve( './src' )
     }
   },
   module: {

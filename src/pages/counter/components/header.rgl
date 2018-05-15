@@ -1,0 +1,17 @@
+<template>
+<h1 class="m-title">{ title }</h1>
+</template>
+
+<script>
+export default {
+  
+}
+</script>
+
+<style>
+.m-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+</style>

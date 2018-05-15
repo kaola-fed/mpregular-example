@@ -1,0 +1,56 @@
+<template>
+
+<div class="m-panel">
+  <div class="m-step">
+    <label>step: </label><input r-model="{ step }" />
+  </div>
+
+  <button on-click="{ this.onAdd(step) }">+</button>
+
+  <button on-click="{ this.onAdd(-step) }">-</button>
+</div>
+
+</template>
+
+<script>
+export default {
+  config() {
+    this.data = {
+      step: 1
+    }
+  },
+  onAdd(n = 1) {
+    n = +n;
+    if (Number.isNaN(n)) {
+      n = this.data.step = 1;
+    }
+    console.log(this.data.$event)
+    this.$emit('add', {
+      sender: this,
+      n
+    });
+  }
+}
+</script>
+
+<style lang="less" scoped>
+.m-panel {
+  display: flex;
+  align-items: space-around;
+  flex-wrap: wrap;
+  .m-step {
+    display: flex;
+    width: 750rpx;
+    margin: 0 0 10px 30px;
+    line-height: 30px;
+    input {
+      padding: 6px 10px;
+      margin-left: 10px;
+      background: #eee;
+    }
+  }
+  button {
+    width: 100px;
+  }
+}
+</style>

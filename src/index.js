@@ -9,7 +9,8 @@ app.$inject()
 export default {
   config: {
     pages: [
-      // 'pages/detail/index',
+      'pages/index/index',
+      'pages/counter/index',
       'pages/todomvc/index'
     ],
     window: {

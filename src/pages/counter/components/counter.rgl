@@ -1,0 +1,37 @@
+<template>
+
+<p class="m-count">{ count }</p>
+<Panel step="{ step }" on-add="{ this.onAdd($event) }"/>
+
+</template>
+
+<script>
+import Panel from './panel.rgl';
+
+export default {
+  components: {
+    Panel
+  },
+  config(data) {
+    Object.assign(this.data,
+      {
+        count: 0
+      },
+      data
+    )
+  },
+  onAdd(e) {
+    this.$emit('add', {
+      sender: this,
+      n: e.n
+    });
+  }
+}
+</script>
+
+<style lang="less" scoped>
+.m-count {
+  padding: 20px;
+  text-align: center;
+}
+</style>

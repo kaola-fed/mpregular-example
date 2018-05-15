@@ -1,0 +1,32 @@
+<template>
+
+  <Header title="{ title }"></Header>
+  <Counter count="{ count }" step="{ step }" on-add="{ this.onAdd($event) }"/>
+
+</template>
+
+<script>
+import Header from './components/header.rgl';
+import Counter from './components/counter.rgl';
+
+export default {
+  mpType: 'page',
+  components: {
+    Header,
+    Counter
+  },
+  config() {
+    this.data = {
+      title: 'demo',
+      count: 0,
+      step: 1
+    }
+  },
+  onAdd(e) {
+    this.data.count += e.n;
+  }
+}
+</script>
+
+<style lang="less">
+</style>

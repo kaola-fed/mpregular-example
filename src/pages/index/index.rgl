@@ -1,0 +1,37 @@
+<template>
+<div class="u-nav">
+  {#list source as item}
+  <a class="u-navigator" url="{ item.path }">{ item.name }</a>
+  {/list}
+</div>
+</template>
+
+<script>
+export default {
+  mpType: 'paeg',
+  config() {
+    this.data = {
+      source: [
+        {
+          name: 'counter',
+          path: '../../pages/counter/index',
+        },
+        {
+          name: 'todomvc',
+          path: '../../pages/todomvc/index'
+        }
+      ]
+    }
+  }
+}
+</script>
+
+<style>
+.u-nav {
+  padding: 10px;
+  font-size: 20px;
+}
+.u-navigator {
+  color: blue;
+}
+</style>
