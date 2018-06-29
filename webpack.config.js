@@ -1,6 +1,7 @@
 const path = require( 'path' )
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' )
 const webpack = require( 'webpack' )
+const MPRegularPlugin = require( 'mpregular-loader/lib/plugin' )
 
 function resolve(uri) {
   return path.resolve( __dirname,  uri);
@@ -91,5 +92,8 @@ module.exports = {
         ) || count > 1
       }
     }),
+    new MPRegularPlugin( {
+      cssChunks: [ 'vendor' ]
+    } )
   ]
 }
