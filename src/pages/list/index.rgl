@@ -1,0 +1,21 @@
+<template>
+  {#list items as item}
+    <ui-button>
+      { item }
+    </ui-button>
+  {/list}
+</template>
+
+<script>
+  import Button from './button.rgl'
+
+  export default {
+    mpType: 'page',
+    components: {
+      'ui-button': Button
+    },
+    config() {
+      this.data.items = [ 'apple', 'orange', 'peach' ]
+    }
+  }
+</script>

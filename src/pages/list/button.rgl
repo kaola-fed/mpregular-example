@@ -1,0 +1,9 @@
+<template>
+  <button>
+    {#inc this.$body}
+  </button>
+</template>
+
+<script>
+  export default {}
+</script>

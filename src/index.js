@@ -11,7 +11,8 @@ export default {
     pages: [
       'pages/index/index',
       'pages/counter/index',
-      'pages/todomvc/index'
+      'pages/todomvc/index',
+      'pages/list/index',
     ],
     window: {
       backgroundTextStyle: 'light',
