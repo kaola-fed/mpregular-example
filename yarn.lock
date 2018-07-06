@@ -2376,9 +2376,9 @@ mixin-deep@^1.2.0:
   dependencies:
     minimist "0.0.8"
 
-mpregular-loader@0.0.31:
-  version "0.0.31"
-  resolved "https://registry.yarnpkg.com/mpregular-loader/-/mpregular-loader-0.0.31.tgz#9372f492f90bb400c068ac16fd01f2856988d518"
+mpregular-loader@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/mpregular-loader/-/mpregular-loader-0.1.2.tgz#2e7d54d7ea2d12d6aa9a9d837ebb873080297713"
   dependencies:
     babel-core "^6.26.0"
     babel-generator "^6.26.1"
@@ -2389,7 +2389,7 @@ mpregular-loader@0.0.31:
     html-minifier "^3.5.6"
     loader-utils "^1.1.0"
     lru-cache "^4.0.1"
-    mpregular-template-compiler "0.0.24"
+    mpregular-template-compiler "0.0.32"
     nanoid "^1.0.2"
     parse5 "^2.1.5"
     postcss "^5.0.21"
@@ -2398,16 +2398,16 @@ mpregular-loader@0.0.31:
     resolve "^1.7.1"
     source-map "^0.5.6"
 
-mpregular-template-compiler@0.0.24:
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/mpregular-template-compiler/-/mpregular-template-compiler-0.0.24.tgz#4f5c066f3b4c9d2f40c1ea33d6237bdff16e7864"
+mpregular-template-compiler@0.0.32:
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/mpregular-template-compiler/-/mpregular-template-compiler-0.0.32.tgz#4f55fa0deacb4b8dbc1cd019735ed959c80eeab2"
   dependencies:
     lodash.clonedeep "^4.5.0"
     nanoid "^1.0.2"
 
-mpregular@0.0.24:
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/mpregular/-/mpregular-0.0.24.tgz#52c3ba07d9e0c8fe1e60d04c062422e5b406824a"
+mpregular@0.0.38-beta.4:
+  version "0.0.38-beta.4"
+  resolved "https://registry.yarnpkg.com/mpregular/-/mpregular-0.0.38-beta.4.tgz#0d76f9942a06bffca056d34c7de09e7abd4e4887"
 
 mpvue-webpack-target@^1.0.0:
   version "1.0.0"
