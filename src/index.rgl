@@ -5,8 +5,8 @@
 <script>
   export default {
     mpType: 'app',
-    created() {
-
+    onLaunch() {
+      console.log('launch')
     },
   }
 </script>
