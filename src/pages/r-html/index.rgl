@@ -1,0 +1,20 @@
+<template>
+  <div r-html="{ article }"></div>
+</template>
+
+<script>
+const article = `
+<img src="//pop.nosdn.127.net/e2170dcf-efd0-4906-9da9-3a9900e52b39"><br/>
+<img src="//pop.nosdn.127.net/929408c3-7a72-44d2-9b11-8d5c6ea98dbb"><br/>
+<span>
+  <span>test</span><br/><span>test2</span>
+</span>
+`
+
+export default {
+  mpType: 'page',
+  config() {
+    this.data.article = article;
+  }
+}
+</script>

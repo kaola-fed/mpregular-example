@@ -11,6 +11,7 @@ export default {
       'pages/counter/index',
       'pages/todomvc/index',
       'pages/list/index',
+      'pages/r-html/index',
       'pages/r-model/index',
     ],
     window: {

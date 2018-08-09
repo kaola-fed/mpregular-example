@@ -43,6 +43,3 @@ App.filter('num', {
 
 export default App;
 </script>
-
-<style lang="less">
-</style>

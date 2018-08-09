@@ -15,6 +15,7 @@ module.exports = {
     'pages/todomvc/index': resolve( 'src/pages/todomvc/index.js' ),
     'pages/list/index': resolve( 'src/pages/list/index.js' ),
     'pages/r-model/index': resolve( 'src/pages/r-model/index.js' ),
+    'pages/r-html/index': resolve( 'src/pages/r-html/index.js' ),
   },
   // target: 'node',
   target: require('mpvue-webpack-target'),
