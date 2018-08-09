@@ -1,0 +1,48 @@
+<template>
+  <div>
+    value1:
+      <input r-model="{ value1 }">
+    value shadow:
+      <div>{ value1 }</div>
+  </div>
+  <div>
+    value2 with filter:
+      <input r-model="{ value2 | num }">
+    value shadow:
+      <div>{ value2 }</div>
+  </div>
+</template>
+
+<script>
+import Regular from 'regularjs';
+
+const App = Regular.extend({
+  mpType: 'page',
+  config() {
+    this.data = {
+      value1: 'input',
+      value2: 100
+    };
+  },
+});
+App.filter('num', {
+    get(text) {
+      return text;
+    },
+    set(value) {
+      value += '';
+      let digitLen = (value.split('.')[1] || '').length;
+      if (digitLen > 2 ) {
+        let t = Number(value);
+        typeof t === 'number' && (t = t.toFixed(2));
+        return t;
+      }
+      return value;
+    }
+});
+
+export default App;
+</script>
+
+<style lang="less">
+</style>

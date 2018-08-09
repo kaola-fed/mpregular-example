@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  mpType: 'paeg',
+  mpType: 'page',
   config() {
     this.data = {
       source: [
@@ -23,6 +23,10 @@ export default {
         {
           name: 'list',
           path: '../../pages/list/index'
+        },
+        {
+          name: 'r-model',
+          path: '../../pages/r-model/index'
         }
       ]
     }
