@@ -16,6 +16,7 @@ module.exports = {
     'pages/list/index': resolve( 'src/pages/list/index.js' ),
     'pages/r-model/index': resolve( 'src/pages/r-model/index.js' ),
     'pages/r-html/index': resolve( 'src/pages/r-html/index.js' ),
+    'pages/r-component/index': resolve( 'src/pages/r-component/index.js' ),
   },
   // target: 'node',
   target: require('mpvue-webpack-target'),

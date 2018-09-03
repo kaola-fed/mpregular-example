@@ -1,0 +1,32 @@
+<template>
+  <r-component ref="c" is="{ is }" name="{ name }"></r-component>
+</template>
+
+<script>
+import A from './component-a.rgl'
+import B from './component-b.rgl'
+
+export default {
+  mpType: 'page',
+  components: {
+    'comp-a': A,
+    'comp-b': B,
+  },
+  config() {
+    this.data.is = 'comp-a'
+    this.data.name = 'comp-a'
+
+    setTimeout( () => {
+      this.data.is = 'comp-b'
+      this.data.name = 'comp-b'
+      this.$update()
+      
+      console.log( 'ref', this.$refs.c )
+    }, 1000 )
+  },
+  
+  init() {
+    console.log( 'ref', this.$refs.c )
+  }
+}
+</script>

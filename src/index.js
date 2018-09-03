@@ -13,6 +13,7 @@ export default {
       'pages/list/index',
       'pages/r-html/index',
       'pages/r-model/index',
+      'pages/r-component/index',
     ],
     window: {
       backgroundTextStyle: 'light',
