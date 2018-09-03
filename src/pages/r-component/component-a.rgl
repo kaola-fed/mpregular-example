@@ -1,6 +1,7 @@
 <template>
   <h3>A</h3>
   <div>I am { name }</div>
+  {#inc this.$body}
 </template>
 
 <script>

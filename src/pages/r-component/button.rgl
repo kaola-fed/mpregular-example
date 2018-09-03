@@ -1,0 +1,7 @@
+<template>
+  <div class="button">
+    {#inc this.$body}
+  </div>
+</template>
+<script>
+</script>

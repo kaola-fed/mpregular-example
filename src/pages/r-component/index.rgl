@@ -1,16 +1,27 @@
 <template>
   <r-component ref="c" is="{ is }" name="{ name }"></r-component>
+  {#list components as component}
+    <div class="wrapper">
+      <div style="border-bottom: solid 1px #ddd;"></div>
+      <r-component is="{ component }" name="{ component_index }">
+        slot: { component },{ component_index }
+        <Button>{ component_index }</Button>
+      </r-component>
+    </div>
+  {/list}
 </template>
 
 <script>
 import A from './component-a.rgl'
 import B from './component-b.rgl'
+import Button from './button.rgl'
 
 export default {
   mpType: 'page',
   components: {
     'comp-a': A,
     'comp-b': B,
+    Button,
   },
   config() {
     this.data.is = 'comp-a'
@@ -23,6 +34,11 @@ export default {
       
       console.log( 'ref', this.$refs.c )
     }, 1000 )
+    
+    this.data.components = [
+      'comp-a',
+      'comp-b',
+    ]
   },
   
   init() {
